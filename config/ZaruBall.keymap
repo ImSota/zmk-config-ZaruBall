@@ -1,6 +1,6 @@
 // スクロール量の設定
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include <behaviors/rgbled_widget.dtsi>
 #include <input/processors.dtsi>
