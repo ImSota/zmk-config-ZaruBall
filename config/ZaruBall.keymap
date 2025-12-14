@@ -170,11 +170,11 @@
             display-name = "Adjust";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans              &bt BT_CLR_ALL  &none  &none  &none  &none  &none
-&trans  &none         &none         &none         &none         &none                   &trans  &trans  &trans  &trans              &bt BT_CLR      &none  &none  &none  &none  &none
-&trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_bat  &out OUT_TOG    &none  &none  &none  &none  &none
-&trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_con  &studio_unlock  &none  &none  &none  &none  &none
-&trans  &kp C_MUTE                  &trans        &trans        &trans        &trans                                      &trans    &kp DEL                                     &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans            &bt BT_CLR_ALL  &none  &none  &none  &none  &none
+&trans  &none         &none         &none         &none         &none                   &trans  &trans  &trans  &trans            &bt BT_CLR      &none  &none  &none  &none  &none
+&trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &none   &out OUT_TOG    &none  &none  &none  &none  &none
+&trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &none   &studio_unlock  &none  &none  &none  &none  &none
+&trans  &kp C_MUTE                  &trans        &trans        &trans        &trans                                      &trans  &kp DEL                                     &trans
             >;
         };
 
