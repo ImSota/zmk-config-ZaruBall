@@ -20,7 +20,7 @@
 
 &trackball_listener {
     input-processors = <
-        /* AML 無効 */
+        &zip_temp_layer MOUSE 500
     >;
 
     scroller {
