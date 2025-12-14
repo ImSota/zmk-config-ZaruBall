@@ -1,6 +1,6 @@
 // スクロール量の設定
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 #include <behaviors/rgbled_widget.dtsi>
 #include <input/processors.dtsi>
@@ -20,14 +20,13 @@
 
 &trackball_listener {
     input-processors = <
-                         &zip_temp_layer MOUSE 500
     >;
 
     scroller {
         layers = <SCROLL>;
         input-processors = <
                             &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
-                            &zip_xy_scaler 1 20
+                            &zip_xy_scaler 1 10
                             &zip_xy_to_scroll_mapper
         >;
     };
