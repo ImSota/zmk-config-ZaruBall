@@ -142,11 +142,11 @@
             display-name = "Lower";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &kp F1   &kp F2     &kp F3    &kp F4     &kp F5               &kp LA(F2)  &kp KP_N7     &kp KP_N8   &kp KP_N9  &kp KP_SLASH     &kp KP_NUMLOCK
-&trans  &kp F6   &kp F7     &kp F8    &kp F9     &kp F10              &kp LA(F1)  &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MULTIPLY  &none
-&trans  &kp F11  &kp F12    &kp UP    &none      &kp HOME  &kp PG_UP  &kp LPAR    &kp C_VOL_UP  &kp KP_N1   &kp KP_N2  &kp KP_N3        &kp KP_MINUS    &none
-&trans  &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN  &kp RPAR    &kp C_VOL_DN  &kp KP_DOT  &kp KP_N0  &kp KP_EQUAL     &kp KP_PLUS     &none
-&trans           &kp RSHFT  &trans    &trans     &trans    &trans     &trans      &kp DEL                                               &studio_unlock
+&trans  &kp F1            &kp F2      &kp F3             &kp F4                &kp N5                                         &kp F6             &kp F7             &kp F8            &kp F9           &kp F10        &kp F11
+&trans  &kp F11           &kp F12     &trans             &trans                &trans                &trans                   &kp LG(LS(LEFT))   &kp LG(LS(RIGHT))  &kp UP_ARROW      &trans           &trans         &trans
+&trans  &kp LC(UP_ARROW)  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &trans                &kp PG_UP                &kp LEFT_SHIFT     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW  &kp SPACE      &trans  &trans
+&trans  &kp LC(DOWN)      &trans      &trans             &kp LS(LA(NUMBER_4))  &kp LS(LA(N5))        &kp PG_DN                &kp RIGHT_CONTROL  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans         &trans  &trans
+&trans                    &kp RSHFT   &trans             &kp C_MUTE            &kp C_VOLUME_DOWN     &kp C_VOLUME_UP          &trans             &kp DEL                                                              &studio_unlock
             >;
         };
 
@@ -154,11 +154,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp LA(F2) LA(F1)>;
             bindings = <
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
-&trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &kp PG_UP  &kp HOME  &none     &kp UP    &none      &none   &none
-&trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
-&trans         &none  &trans     &trans     &trans          &trans           &trans     &kp DEL                                  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                   &trans       &trans          &trans                &trans                 &trans         &trans
+&trans  &trans        &kp N7        &kp N8        &kp NUMBER_9  &kp ASTERISK                  &trans           &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &kp DOUBLE_QUOTES
+&trans  &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                     &msc SCRL_LEFT   &kp EQUAL    &kp PLUS        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &kp COLON  &trans
+&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                      &msc SCRL_RIGHT  &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans         &trans     &trans
+&trans                &kp N0        &kp DOT       &trans        &kp RETURN                    &kp BACKSPACE    &bt BT_PRV   &kp DEL                                                                       &bt BT_SEL 0
             >;
         };
 
