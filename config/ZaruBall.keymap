@@ -12,7 +12,7 @@
 #define RAISE 2
 #define ADJUST 3
 #define MOUSE 4
-#define SCROLL 1
+#define SCROLL 5
 
 // スクロール量の設定
 
@@ -28,7 +28,7 @@
     >;
 
     scroller {
-        layers = <SCROLL>;
+        layers = <5>;  // SCROLL layer
         input-processors = <
                             // スクロールの向きの変更
                             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
@@ -56,7 +56,7 @@
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>; // スクロールのタップ時間
         };
@@ -112,12 +112,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to SCROLL>,
+                <&to 5>,  // SCROLL layer
                 <&macro_press>,
-                <&mo SCROLL>,
+                <&mo 5>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo SCROLL>;
+                <&mo 5>;
         };
     };
 };
@@ -188,7 +188,17 @@
 
         // Extra layer can be added in ZMK STUDIO
 
-        extra1 { status = "reserved"; };
+        scroll_layer {
+            display-name = "Scroll";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+            >;
+        };
 
         extra2 { status = "reserved"; };
     };
