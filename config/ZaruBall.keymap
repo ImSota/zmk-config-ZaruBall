@@ -112,7 +112,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to 5>,  // SCROLL layer
+                <&to 5>,
                 <&macro_press>,
                 <&mo 5>,
                 <&macro_pause_for_release>,
@@ -142,11 +142,11 @@
             display-name = "Lower";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &kp F1            &kp F2      &kp F3             &kp F4                &kp N5                                         &kp F6             &kp F7             &kp F8            &kp F9           &kp F10        &kp F11
-&trans  &kp F11           &kp F12     &trans             &trans                &trans                &trans                   &kp LG(LS(LEFT))   &kp LG(LS(RIGHT))  &kp UP_ARROW      &trans           &trans         &trans
-&trans  &kp LC(UP_ARROW)  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &trans                &kp PG_UP                &kp LEFT_SHIFT     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW  &kp SPACE      &trans  &trans
-&trans  &kp LC(DOWN)      &trans      &trans             &kp LS(LA(NUMBER_4))  &kp LS(LA(N5))        &kp PG_DN                &kp RIGHT_CONTROL  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans         &trans  &trans
-&trans                    &kp RSHFT   &trans             &kp C_MUTE            &kp C_VOLUME_DOWN     &kp C_VOLUME_UP          &trans             &kp DEL                                                              &studio_unlock
+&trans  &kp F1            &kp F2      &kp F3             &kp F4                &kp N5                                 &kp F6                  &kp F7                   &kp F8          &kp F9            &kp F10          &kp F11
+&trans  &kp F11           &kp F12     &trans             &trans                &trans                                 &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP_ARROW    &trans            &trans           &trans
+&trans  &kp LC(UP_ARROW)  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &trans                &trans           &kp PG_UP               &kp LEFT_SHIFT           &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW  &kp SPACE      &trans
+&trans  &kp LC(DOWN)      &trans      &trans             &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))  &trans           &kp PG_DN               &kp RIGHT_CONTROL        &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT       &kp RIGHT_ALT  &trans
+&trans                    &trans      &kp RSHFT          &kp C_MUTE            &kp C_VOLUME_DOWN     &kp C_VOLUME_UP  &kp C_VOLUME_UP         &trans                                                                      &kp DEL
             >;
         };
 
@@ -154,11 +154,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp LA(F2) LA(F1)>;
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                   &trans       &trans          &trans                &trans                 &trans         &trans
-&trans  &trans        &kp N7        &kp N8        &kp NUMBER_9  &kp ASTERISK                  &trans           &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT        &kp DOUBLE_QUOTES
-&trans  &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                     &msc SCRL_LEFT   &kp EQUAL    &kp PLUS        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &kp COLON  &trans
-&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS                      &msc SCRL_RIGHT  &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans         &trans     &trans
-&trans                &kp N0        &kp DOT       &trans        &kp RETURN                    &kp BACKSPACE    &bt BT_PRV   &kp DEL                                                                       &bt BT_SEL 0
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp SLASH                    &trans           &trans      &trans                &trans                &trans                 &trans
+&trans  &trans        &kp N7        &kp N8        &kp NUMBER_9  &kp ASTERISK                 &kp AT_SIGN      &kp GRAVE   &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES
+&trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &trans         &msc SCRL_LEFT   &kp EQUAL   &kp PLUS              &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON      &kp COLON
+&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS      &trans         &msc SCRL_RIGHT  &kp MINUS   &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans
+&trans                &trans        &kp N0        &kp DOT       &kp ENTER     &kp BACKSPACE  &kp BACKSPACE    &bt BT_PRV                                                                     &kp DEL
             >;
         };
 
