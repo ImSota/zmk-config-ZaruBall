@@ -178,7 +178,7 @@
 &mt LEFT_SHIFT TAB       &kp A   &kp S   &kp D      &kp F      &kp G                        &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                      &kp H             &kp J   &kp K      &kp L    &kp FSLH      &kp ENTER
 &kp LALT                 &kp Z   &kp X   &kp C      &kp V      &kp B      &kp UP_ARROW      &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp LEFT          &kp N             &kp M   &kp COMMA  &kp DOT  &kp LS(PLUS)  &kp MINUS
 &kp LEFT_COMMAND         &kp N1  &kp N2  &kp N3     &kp N4     &kp N5     &kp DOWN_ARROW    &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RIGHT         &kp N6            &kp N7  &kp N8     &kp N9   &kp N0        &kp LS(COLON)
-&paste_missin            &trans          &kp LG(Q)  &mkp RCLK  &kp SPACE  &mkp LCLK                                                                 &lt 1 LANGUAGE_2  &lt 2 LANGUAGE_1                                            &kp LS(LG(NUMBER_4))
+&paste_missin            &none           &kp LG(Q)  &mkp RCLK  &kp SPACE  &mkp LCLK                                                                 &lt 1 LANGUAGE_2  &lt 2 LANGUAGE_1                                            &kp LS(LG(NUMBER_4))
             >;
         };
 
