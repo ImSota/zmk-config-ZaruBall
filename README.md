@@ -16,7 +16,7 @@
 6. 完成したファーウェアはページ下部のArtifactsからダウンロードできます。
 7. ダウンロードしたら解凍します。left, right, resetのそれぞれが含まれる名前のファイルが3つ生成されている事を確認してください。resetのファイルはキーボードに不具合が生じた時に利用するファームウェアなので今回は使用しません。
 8. 右手のキーボードをPCに接続します。マイコン左上のリセットボタンをダブルクリックして、PCにボリュームとして認識させます。
-9. PCのエクスプローラーでXIAO SENSEという名の記憶装置が認識されたら、その中に解答したrightのファイルをコピーします。
+9. PCのエクスプローラーでXIAO SENSEという名の記憶装置が認識されたら、その中に解凍したrightのファイルをコピーします。
 10. 次に左手側のキーボードを接続し、同様の手続きでボリュームとして認識させます。
 11. 再度表示されたXIAO SENSEの中にleftのファイルをアップロードします。
 12. キーボードの電源を入れ、Bluetoothの接続を行ってください。
@@ -34,9 +34,9 @@
 
 ### .keymapを直接編集する
 キーマップを直接編集したい方は
-[config/ZaruBall.keymap](config/Z]]aruBall.keymap)
+[config/ZaruBall.keymap](config/ZaruBall.keymap)
 を編集してください。<br>
-boards/shields下にもZaruBall.keymapが存在しますが、config化のものの方が優先されます。<br>
+boards/shields下にもZaruBall.keymapが存在しますが、config下のものの方が優先されます。<br>
 詳しくは公式Docs
 https://zmk.dev/docs/keymaps
 を解読してみてください。
@@ -54,4 +54,4 @@ Saveボタンで参照しているリポジトリにpushでき、自動的にWor
 ### ZMK Studioを利用する方法
 ZMK Studioにはアプリ版とブラウザ版が存在し、ブラウザ版にはUSB接続時のみ使用可能という制約がある。<br>
 ZMK Studio起動後、 &studio_unlock　を配置したキーを押下することでStudioで編集が可能となる。<br>
-右上の保存ボタンを推すことで、キーマップをすぐにキーボードへ反映できる。
+右上の保存ボタンを押すことで、キーマップをすぐにキーボードへ反映できる。
