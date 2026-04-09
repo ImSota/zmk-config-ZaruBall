@@ -18,11 +18,11 @@
 #
 
 include:
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: ZaruBall_left rgbled_adapter
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: ZaruBall_right rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: settings_reset
