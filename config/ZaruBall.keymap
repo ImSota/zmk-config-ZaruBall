@@ -139,6 +139,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        sclol_mkp: sclol_mkp {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCLOL_MKP";
+            #sensor-binding-cells = <0>;
+            bindings = <&mkp MB4>, <&mkp MB5>;
+        };
     };
 };
 
@@ -223,7 +230,7 @@
 &trans  &trans        &trans      &trans         &trans        &trans                         &trans  &trans  &trans  &trans                          &trans         &trans        &trans        &trans         &kp QUESTION  &trans
 &trans  &trans        &trans      &trans         &trans        &trans         &kp C_VOL_UP    &trans  &trans  &trans  &trans    &kp C_BRIGHTNESS_INC  &trans         &trans        &trans        &trans         &kp EQUAL     &kp LS(MINUS)
 &trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp C_VOL_DN    &trans  &trans  &trans  &trans    &kp C_BRIGHTNESS_DEC  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(TILDE)  &kp INT_YEN   &kp SEMI
-&trans  &trans                    &kp GLOBE      &trans        &trans         &trans                                            &trans                &trans                                                                  &trans
+&trans  &trans                    &trans         &trans        &trans         &trans                                            &trans                &trans                                                                  &trans
             >;
         };
 
@@ -237,7 +244,7 @@
 &trans  &trans          &trans  &trans  &trans  &trans                                             &trans              &trans                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F14 F15>;
+            sensor-bindings = <&sclol_mkp>;
         };
 
         raise_layer {
