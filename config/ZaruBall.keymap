@@ -22,7 +22,7 @@
 #define SCROLL   3
 
 // スクロール量の設定
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
 
 &trackball_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
@@ -55,7 +55,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <10>; // スクロールのタップ時間
         };
 
         td0: tap_dance_0 {
