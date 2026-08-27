@@ -1,12 +1,11 @@
 #include <behaviors/rgbled_widget.dtsi>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
 #define BASE 0
 #define LOWER 1
@@ -16,15 +15,18 @@
 #define SCROLL 1
 
 // スクロール量の設定
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 // トラックボールの設定(AML, SCROLL)
+
 &trackball_listener {
-    input-processors =  <
+    input-processors = <
                         // トラックボールの向きの変更(ZaruBallv1とv2,v3ではセンサーの向きが異なるので調整してください。デフォルトではv2,v3用)
                          &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
                          &zip_temp_layer MOUSE 500 // 500ms stay at mouse layer
-                        >;
+    >;
+
     scroller {
         layers = <SCROLL>;
         input-processors = <
@@ -32,7 +34,7 @@
                             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
                             &zip_xy_scaler 1 20 // スクロールの感度(default: x20)
                             &zip_xy_to_scroll_mapper
-                            >;
+        >;
     };
 };
 
@@ -50,10 +52,12 @@
 / {
     behaviors {
         // スクロール用のbehaviorの設定
+
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>; // スクロールのタップ時間
         };
 
@@ -61,7 +65,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCTL LANG2>, <&mo RAISE>, <&mo MOUSE>;
+            bindings = <&mt LCTRL LANG2>, <&mo RAISE>, <&mo MOUSE>;
         };
 
         td1: tap_dance_1 {
