@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo 5>;
+            bindings = <&mt RCTRL LANG1>, <&mo RAISE>, <&mo 5>;
         };
     };
 };
